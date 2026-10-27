@@ -2,19 +2,22 @@
 
 # บันทึกการใช้ prompt
 
-**ชื่อ / รหัสนิสิต:**
-**agent ที่ใช้:** เช่น GitHub Copilot (Agent mode), Gemini Code Assist, Gemini CLI, Claude Code, Codex, Cursor, Cline: …
-**โมเดล:** …
-**แพ็กเกจที่ใช้:** เช่น Copilot Student, Copilot Free, Gemini รุ่นฟรี: …
+**ชื่อ / รหัสนิสิต:** 6970275821 Vimolman Chongstitvatana
+
+**agent ที่ใช้:** Claude Code
+
+**โมเดล:** Claude Opus 5.5
+
+**แพ็กเกจที่ใช้:** Claude pro
 
 บันทึกทุกคำขอที่ส่งให้ agent ช่อง "ไฟล์ที่ agent อ่าน" คือไฟล์ที่ agent รายงาน หรือที่นิสิตเห็นว่า agent เปิด
 
-| # | งาน / run | agent + โมเดล | ข้อความที่ส่ง (ย่อ) | ไฟล์ที่ agent อ่าน | อยู่ในขอบเขตหลักฐานที่อนุญาตหรือไม่ | มีประโยชน์ (1–5) | หมายเหตุ |
-|---|---|---|---|---|---|---|---|
-| 1 | 1-A | | `prompts/1-…` run A | | | | |
-| 2 | 1-B | | `prompts/1-…` run B | | | | |
-| 3 | 2-a | | `prompts/2-…` run a | | | | |
-| 4 | 2-b | | `prompts/2-…` run b | | | | |
-| 5 | 3 | | `prompts/3-…` | | | | |
-| 6 | | | | | | | |
-| 7 | | | | | | | |
+| #   | งาน / run | agent + โมเดล                 | ข้อความที่ส่ง (ย่อ) | ไฟล์ที่ agent อ่าน                                                                                                                                                                                                                                                                                                                                                                              | อยู่ในขอบเขตหลักฐานที่อนุญาตหรือไม่ | มีประโยชน์ (1–5) | หมายเหตุ |
+| --- | --------- | ----------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ---------------- | -------- |
+| 1   | 1-A       | Claude Code + Claude Opus 5.5 | `prompts/1-…` run A | prompts/1-recover-architecture.md, system/online-boutique/protos/demo.proto                                                                                                                                                                                                                                                                                                                     | Yes                                 | 3                |          |
+| 2   | 1-B       | Claude Code + Claude Opus 5.5 | `prompts/1-…` run B | prompts/1-recover-architecture.md, system/online-boutique/protos/demo.proto, system/online-boutique/kubernetes-manifests/: README.md, kustomization.yaml, adservice.yaml, cartservice.yaml, checkoutservice.yaml, currencyservice.yaml, emailservice.yaml, frontend.yaml, loadgenerator.yaml, paymentservice.yaml, productcatalogservice.yaml, recommendationservice.yaml, shippingservice.yaml | Yes                                 | 4                |          |
+| 3   | 2-a       | Claude Code + Claude Opus 5.5 | `prompts/2-…` run a | prompts/2-write-adr.md, docs/adr/template.md                                                                                                                                                                                                                                                                                                                                                    | Yes                                 | 2                |          |
+| 4   | 2-b       | Claude Code + Claude Opus 5.5 | `prompts/2-…` run b | prompts/2-write-adr.md, docs/adr/template.md, docs/scenario.md, docs/adr/0001-use-redis-for-cart-storage.md, system/online-boutique/src/checkoutservice/main.go                                                                                                                                                                                                                                 | Yes                                 | 4                |          |
+| 5   | 3         | Claude Code + Claude Opus 5.5 | `prompts/3-…`       | prompts/3-review-adr.md, docs/adr/0002-publish-order-placed-event-via-rabbitmq.md, docs/scenario.md                                                                                                                                                                                                                                                                                             | Yes                                 | 5                |          |
+| 6   |           |                               |                     |                                                                                                                                                                                                                                                                                                                                                                                                 |                                     |                  |          |
+| 7   |           |                               |                     |                                                                                                                                                                                                                                                                                                                                                                                                 |                                     |                  |          |
